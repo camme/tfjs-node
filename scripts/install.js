@@ -71,6 +71,8 @@ async function getTargetUri() {
   } else {
     throw new Error(`Unsupported platform: ${platform}`);
   }
+
+    console.log('download:' + targetUri);
 }
 
 /**

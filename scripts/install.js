@@ -71,8 +71,6 @@ async function getTargetUri() {
   } else {
     throw new Error(`Unsupported platform: ${platform}`);
   }
-
-    console.log('download:' + targetUri);
 }
 
 /**
@@ -101,7 +99,7 @@ async function downloadLibtensorflow(callback) {
   await getTargetUri();
   // The deps folder and resources do not exist, download and callback as
   // needed:
-  console.error('* Downloading libtensorflow');
+  console.error('* Downloading libtensorflow', targetUri);
 
   // Ensure dependencies staged directory is available:
   await ensureDir(depsPath);
